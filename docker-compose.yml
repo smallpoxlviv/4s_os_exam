@@ -13,7 +13,7 @@ services:
       - /var/lib/docker/volumes/mysql:/var/lib/mysql
     healthcheck:
       test: curl -f http://localhost:8090/healthcheck || exit 1
-      start-period: 180s
+      start_period: 180s
       interval: 10s
       timeout: 10s
       retries: 6
