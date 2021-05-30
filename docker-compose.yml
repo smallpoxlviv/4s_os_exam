@@ -11,7 +11,6 @@ services:
       - 3306:3306
     volumes:
       - /var/lib/docker/volumes/mysql:/var/lib/mysql
-    # healthcheck:
-    #   test: ["CMD", "curl", "-f", "http://localhost:8090/healthcheck"]
-    #   timeout: 20s
-    #   retries: 100
+    healthcheck:
+      test: curl -f http://localhost:8090/healthcheck || exit 1
+
