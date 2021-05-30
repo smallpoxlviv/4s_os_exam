@@ -8,6 +8,6 @@ COPY init.sh init.sh
 RUN chmod +x init.sh && ./init.sh
 
 COPY loop.sh loop.sh
-RUN chmod +x loop.sh && ./loop.sh
+RUN chmod +x loop.sh
 
 ENTRYPOINT ["loop.sh"]
